@@ -6,7 +6,7 @@ class Auto extends MY_Controller {
 	public function index()
 	{
 		$this->get_page_header();
-		$this->get_page('web/home/home');
+		$this->get_page('home/home');
 		$this->get_page_footer();
 	}
 
