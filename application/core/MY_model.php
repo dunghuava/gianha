@@ -4,7 +4,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class MY_model extends CI_Model {
 	protected $table ='table';
 
-	public function all(){
+	public function all($sort=array()){
+		if (!empty($sort)){
+			$this->db->order_by(array_keys($sort)[0],array_values($sort)[0]);
+		}
 		return $this->db->get($this->table)->result_array();
 	}
 	public function find($where=array()){

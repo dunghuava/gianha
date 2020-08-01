@@ -21,10 +21,10 @@ class Product extends MY_Controller {
 	public function add()
 	{
 		$this->get_admin_header();
-		$list_category = $this->Category_M->all();
+		$arr_category = $this->Category_M->find(['04_parent_id'=>0]);
 		$list_province = $this->Province_M->all();
 		$this->data['page_name'] = 'Thêm dự án';
-		$this->data['list_category'] = $list_category;
+		$this->data['arr_category'] = $arr_category;
 		$this->page('products/add_product',$this->data);
 		$this->get_admin_footer();
 	}

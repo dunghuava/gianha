@@ -1,3 +1,26 @@
+  
+<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
+
+<script type="text/javascript">
+	function CustomizationPlugin( editor ) {
+
+}
+
+ClassicEditor
+	.create( document.querySelector( '.editor' ), {
+	extraPlugins: [ CustomizationPlugin ]
+} )
+	.then( newEditor => {
+	window.editor = newEditor;
+	// The following line adds CKEditor 5 inspector.
+	CKEditorInspector.attach( newEditor, {
+		isCollapsed: true
+	} );
+} )
+	.catch( error => {
+	console.error( error );
+} );
+</script>
   <!-- /.content-wrapper -->
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">

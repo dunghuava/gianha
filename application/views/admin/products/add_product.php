@@ -56,20 +56,30 @@
 				<textarea required class="form-control" name="project_subtile" rows="5"></textarea>
 			</td>
 		</tr>
-		<!-- <tr>
+		<tr>
 			<th>Danh mục</th>
 			<td>
-
-				<select required style="margin-right:10px" name="category_id" id="category_id" class="form-control">
-					<option>---Chọn danh mục---</option>
-					<?php foreach ($list_category as $c){ ?>
-						<option value="<?=$c['04_id']?>"><?=$c['04_name']?></option>
-					<?php } ?>
-				</select>
-
-
+				<select name="04_parent_id" class="form-control" id="">
+                    <?php foreach ($arr_category as $category){ ?>
+                        <option <?=$cate['04_parent_id']==$category['04_id'] ? 'selected':''?> value="<?=$category['04_id']?>"><?=$category['04_name']?></option>
+                        <?php 
+                            $child = $this->Category_M->find(['04_parent_id'=>$category['04_id']]);
+                            foreach ($child as $ch){
+                                ?>  
+                                    <option <?=$cate['04_parent_id']==$ch['04_id'] ? 'selected':''?> value="<?=$ch['04_id']?>">l__<?=$ch['04_name']?></option>
+                                <?php
+								 $child2 = $this->Category_M->find(['04_parent_id'=>$ch['04_id']]);
+								 foreach ($child2 as $ch2){
+								?>
+									<option <?=$cate['04_parent_id']==$ch2['04_id'] ? 'selected':''?> value="<?=$ch2['04_id']?>">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l__<?=$ch2['04_name']?></option>
+								<?php
+								 }
+                            }
+                        ?>
+                    <?php } ?>
+                </select>
 			</td>
-		</tr> -->
+		</tr>
 
 		<tr>
 							<th>Danh mục</th>
@@ -163,26 +173,3 @@
 							
 	</table>
 </div>
-
-<script src="https://cdn.ckeditor.com/ckeditor5/20.0.0/classic/ckeditor.js"></script>
-
-<script type="text/javascript">
-	function CustomizationPlugin( editor ) {
-
-}
-
-ClassicEditor
-	.create( document.querySelector( '.editor' ), {
-	extraPlugins: [ CustomizationPlugin ]
-} )
-	.then( newEditor => {
-	window.editor = newEditor;
-	// The following line adds CKEditor 5 inspector.
-	CKEditorInspector.attach( newEditor, {
-		isCollapsed: true
-	} );
-} )
-	.catch( error => {
-	console.error( error );
-} );
-</script>
