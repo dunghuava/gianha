@@ -11,9 +11,6 @@ public function __construct()
 }
 	public function index()
 	{
-		$all_prj = $this->Project_M->all();
-		print_r($all_prj);die;
-
 		$this->get_admin_header();
 		$this->page('dasboard/dasboard',$this->data);
 		$this->get_admin_footer();

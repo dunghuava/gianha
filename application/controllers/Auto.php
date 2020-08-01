@@ -1,11 +1,13 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auto extends CI_Controller {
+class Auto extends MY_Controller {
 
 	public function index()
 	{
-		echo 'trang chur';	
+		$this->get_page_header();
+		$this->get_page('web/home/home');
+		$this->get_page_footer();
 	}
 
 }

@@ -1,0 +1,90 @@
+.relative{
+	position: relative;
+}
+.absolute{
+	position: absolute;
+}
+nav.navbar{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    width: 100%;
+    background: transparent;
+}
+.sticky {
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+	background: white !important;
+	animation: fade-down 0.2s;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+@keyframes fade-down{
+	from{
+		top:-50px;
+	}
+	to{
+		top:0px;
+	}
+}
+.p0{
+	padding:0px;
+}
+.mg0{
+	margin: 0px;
+}
+img{
+	width: 100%;
+}
+.news-item{
+	position: relative;
+	height: 305px;
+	border-radius: 8px;
+}
+.news-item img{
+	border-radius: 8px;
+	height: 100%;
+}
+.news-title{
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	padding:15px;
+	background: linear-gradient(180deg,transparent,rgba(0,0,0,.9));
+}
+.news-title .title{
+	color: white;
+	font-size: 18px;
+}
+.news-item-small{
+	display: flex;
+	margin-bottom: 10px;
+}
+.news-item-small img{
+	border-radius: 8px;
+}
+.news-item-small .ct-left{
+	width:200px;
+}
+.news-item-small .ct-right{
+	padding-left:5px;
+}
+.news-item-small a{
+	display: inline-flex;
+}
+.news-item-small .title{
+	margin: 0px;
+	font-size: 15px;
+}
+.btn_form{
+	padding-bottom: 2px;
+}
+.btn-select-type{
+	padding:8px 8px 5px 8px;
+	border: 1px solid #fff;
+	background: #ccccccc2;
+	font-size: 16px;
+	display: inline-flex;
+	cursor: pointer;
+}

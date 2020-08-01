@@ -19,10 +19,14 @@ class MY_Controller extends CI_Controller {
 		$this->load->view('admin/content_wrapper',$data);
 	}
 	public function get_page_header($data=null){
-		$this->load->view('header', $data);
+		$this->load->view('web/header', $data);
+		$this->load->view('web/nav', $data);
 	}
+	public function get_page($path,$data=null){
+		$this->load->view($path, $data);
+	}	
 	public function get_page_footer($data=null){
-		$this->load->view('footer', $data);
+		$this->load->view('web/footer', $data);
 	}
 	public function get_admin_header($data=null){
 		$this->load->view('admin/header', $data);
