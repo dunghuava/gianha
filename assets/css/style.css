@@ -51,7 +51,12 @@ img{
 	bottom: 0px;
 	left: 0px;
 	padding:15px;
+	border-radius: 8px;
+	transition: all 0.3s;
 	background: linear-gradient(180deg,transparent,rgba(0,0,0,.9));
+}
+.news-title:hover{
+	padding-bottom: 15px;
 }
 .news-title .title{
 	color: white;
@@ -88,3 +93,4 @@ img{
 	display: inline-flex;
 	cursor: pointer;
 }
+

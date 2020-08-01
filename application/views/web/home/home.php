@@ -238,7 +238,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-6 p0mb">
 						<div class="slick-carosel">
 							<div class="news-item-small">
 								<a href="" title="">

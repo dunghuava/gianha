@@ -1,0 +1,13 @@
+@media screen and (max-width:480px){
+    .form-12 .column1{
+        width: 100%;
+        margin-top: 10%;
+        padding: 1rem !important; 
+    }
+    .news-item{
+        height: auto;
+    }
+    .p0mb{
+        padding:0px !important
+    }
+}

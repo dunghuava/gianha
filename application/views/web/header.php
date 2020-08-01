@@ -10,5 +10,6 @@
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <link rel="stylesheet" href="assets/css/style-starter.css?v=<?=time()?>">
     <link rel="stylesheet" href="assets/css/style.css?v=<?=time()?>">
+    <link rel="stylesheet" href="assets/css/reponsive.css?v=<?=time()?>">
   </head>
   <body>
