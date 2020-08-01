@@ -23,7 +23,7 @@ class MY_Controller extends CI_Controller {
 		$this->load->view('web/nav', $data);
 	}
 	public function get_page($path,$data=null){
-		$this->load->view($path, $data);
+		$this->load->view('web/'.$path, $data);
 	}	
 	public function get_page_footer($data=null){
 		$this->load->view('web/footer', $data);
