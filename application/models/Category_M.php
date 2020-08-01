@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Project_M extends MY_model {
-	protected $table = '03_project';
+class Category_M extends MY_model {
+	protected $table = '04_category';
 }
 
 /* End of file Project_M.php */
