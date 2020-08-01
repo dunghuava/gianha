@@ -10,6 +10,11 @@ class MY_model extends CI_Model {
 	public function find($where=array()){
 		return $this->db->where($where)->get($this->table)->result_array();
 	}
+
+	public function find_row($where=array()){
+		return $this->db->where($where)->get($this->table)->row_array();
+	}
+
 	public function insert($data){
 		return $this->db->insert($this->table,$data);
 	}
